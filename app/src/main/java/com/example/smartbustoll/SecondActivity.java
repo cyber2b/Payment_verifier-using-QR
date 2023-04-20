@@ -12,6 +12,8 @@ public class SecondActivity extends AppCompatActivity {
     private Button fee_details;
     private Button scanner;
     private Button fee_plan;
+
+    private Button checkout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
         fee_details = (Button)findViewById(R.id.button);
         scanner = (Button)findViewById(R.id.button2);
         fee_plan = (Button)findViewById(R.id.button3);
+        checkout =findViewById(R.id.button9);
 
         fee_details.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +43,15 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SecondActivity.this, fee_plan.class);
+                startActivity(intent);
+
+            }
+        });
+
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SecondActivity.this, checkout.class);
                 startActivity(intent);
 
             }

@@ -37,7 +37,7 @@ public class scanner extends AppCompatActivity {
 
     }
 
-    private void scanCode() {
+    public void scanCode() {
         ScanOptions options= new ScanOptions();
         options.setPrompt("turn on the flash");
         options.setBeepEnabled(false);
